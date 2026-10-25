@@ -1,4 +1,4 @@
-# iAM Labs
+# IAM Labs
 
 I'm Landon Alexander, a Cybersecurity and Information Assurance student at Frostburg State University. This is where I document my Identity and Access Management labs.
 
