@@ -71,10 +71,16 @@ I turned email off because if someone gets into your email, they get your codes 
 
 ### Password rules
 
-- Account locks after **5 failed sign-in attempts**
+**Security > Authenticators > Password**
+
+- Account locks after **5 failed sign-in attempts**, and stays locked until an admin unlocks it
+- Okta remembers the last **4 passwords**, so nobody can reuse an old one
+- If a password shows up in a known data breach, it **expires right away** and the user gets logged out
 - No first or last name allowed in the password
 
-**Why I did it:** The lockout lowers the risk of brute force. Without it, someone can keep guessing passwords forever. Blocking names takes away some of the easiest guesses, like "Maria2026."
+**Why I did it:** The lockout lowers the risk of brute force. Without it, someone can keep guessing passwords forever. I left auto-unlock off so a locked account stays locked until someone looks into it. Password history stops people from going back to an old password that might already be leaked. A lot of attacks use passwords stolen from other sites, so if a SpyTech password shows up in a breach, Okta makes the user change it right away. Blocking names takes away some of the easiest guesses, like "Maria2026."
+
+![Password and lockout policy](password_lockout_policy.png)
 
 ### Session limits
 
